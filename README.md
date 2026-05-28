@@ -244,7 +244,7 @@ Con una SNR baja, el denominador del índice R (DC₆₆₀ y DC₉₄₀) perma
 
 Esta es la razón por la cual en la práctica clínica se recomienda siempre correlacionar la lectura de SpO₂ con el índice de perfusión que muestra el monitor (amplitud de la barra Plet): una SpO₂ baja acompañada de un índice de perfusión bajo debe interpretarse con cautela y confirmarse con otros métodos (gasometría arterial, ECG) antes de intervenir. El modo "Low Perfusion" del OxSim OX-1 replica exactamente este escenario, siendo especialmente útil para verificar que el monitor advierta al operador sobre la posible falta de confiabilidad de la medición.
 
-## 8. CONCLSUIONES 
+## 8. CONCLUSIONES 
 - El monitor uMEC 100 cumple con los estándares metrológicos internacionales (ISO 80601-2-61 e IEC 60601-2-27), registrando errores de FC de 0 bpm y errores de SpO₂ máximos de 1% en todos los escenarios, lo que lo acredita como apto para uso clínico.
 
 - El sistema de alarmas funcionó correctamente en los cuatro escenarios simulados, aunque la mayor latencia observada en hipoxemia (~8 s frente a <5 s en los demás casos) indica que el algoritmo del monitor pondera con mayor cautela las caídas de SpO₂ para evitar falsas alarmas.
