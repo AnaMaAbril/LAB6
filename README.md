@@ -48,7 +48,10 @@ Para colocar el uMEC 100 en modo Monitor se sigue el siguiente procedimiento, se
 En el modo Monitor, el uMEC 100 actualiza las lecturas de SpO₂ y FC cada ciclo de pulso y activa las alarmas configuradas cuando los valores salen de los rangos establecidos.
 
 ### 4.2 Parámetros Simulables con el Pronk OxSim OX-1
+
 El simulador OxSim OX-1 dispone de cinco modos de operación que permiten reproducir diferentes condiciones hemodinámicas. Cada modo genera una combinación específica de SpO₂ y FC, como se resume en la tabla siguiente:
+
+_Tabla 1. Modos de operación del simulador Pronk OxSim OX-1_
 
 | Modo | SpO₂ (%) | FC (bpm) | Condición | Descripción clínica |
 | :---: | :---: | :---: | :---: | :--- |
@@ -58,4 +61,21 @@ El simulador OxSim OX-1 dispone de cinco modos de operación que permiten reprod
 | **4** | 98% | 140 bpm | Taquicardia | SpO₂ normal, frecuencia cardíaca elevada (> 100 bpm = taquicardia). Simula estados como estrés, fiebre, hipovolemia o taquicardia supraventricular. |
 | **5** | 99% | ~80 bpm | Low Perfusion | SpO₂ alta pero con amplitud de señal pulsátil reducida. Simula mala perfusión periférica (vasoconstricción, hipotensión, shock). Permite verificar el comportamiento del monitor ante señal débil. |
 
-_Tabla 1. Modos de operación del simulador Pronk OxSim OX-1_
+El dispositivo opera emitiendo luz en dos longitudes de onda: infrarrojo (~940 nm) y rojo (~660 nm). La relación de absorción entre ambas longitudes de onda es la base del cálculo de la SpO₂ en el monitor. La modulación temporal de estas emisiones reproduce la señal pulsátil a la frecuencia cardíaca programada.
+
+Los parámetros que simula son:
+
+•	SpO₂ (Saturación periférica de oxígeno): Porcentaje de hemoglobina saturada con oxígeno. Valores normales en adultos: 95–100%. El simulador genera la relación óptica R correspondiente a cada nivel programado.
+•	FC / FP (Frecuencia cardíaca / Frecuencia de pulso): Número de pulsos por minuto derivados de la onda pletismográfica. Normal en adulto en reposo: 60–100 bpm. El OxSim modula la señal a la frecuencia definida para cada modo.
+•	Onda fotopletismográfica (Plet): Señal que representa los cambios de volumen en el lecho capilar con cada latido. Su amplitud, forma y frecuencia varían según el modo simulado. En Low Perfusion, la amplitud AC se reduce deliberadamente para imitar baja perfusión periférica.
+
+### 4.3 Tolerancias o Errores Máximos Permitidos (EMP) Clínicos
+
+Los errores máximos permitidos para equipos de pulsioximetría y monitoreo cardíaco están establecidos por estándares internacionales de la siguiente manera:
+
+_Tabla 2. Errores Máximos Permitidos (EMP) según normas internacionales_
+
+| Parámetro | EMP | Norma | Observación |
+| :--- | :---: | :---: | :--- |
+| SpO₂ | ± 2 % (rango 70–100%) | ISO 80601-2-61:2017 | Error de exactitud raíz cuadrada media (Arms ≤ 3%) ante condiciones estáticas con hemoglobina normal. |
+| FC / FP | ± 3 bpm o ± 3% (el mayor) | IEC 60601-2-27:2011 | Aplica en rango de 15–300 bpm para monitores cardíacos de diagnóstico. |
