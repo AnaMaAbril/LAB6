@@ -47,56 +47,14 @@ En el modo Monitor, el uMEC 100 actualiza las lecturas de SpO₂ y FC cada ciclo
 
 ### 4.2 Parámetros Simulables con el Pronk OxSim OX-1
 El simulador OxSim OX-1 dispone de cinco modos de operación que permiten reproducir diferentes condiciones hemodinámicas. Cada modo genera una combinación específica de SpO₂ y FC, como se resume en la tabla siguiente:
-%% ================================
-% TABLA EN MATLAB LIVE SCRIPT
-% (Tipo GitHub / Markdown Style)
-%% ================================
 
-Modo = [1;2;3;4;5];
+### Tabla 1. Modos de operación del simulador Pronk OxSim OX-1
 
-SpO2 = ["85%";
-         "95%";
-         "98%";
-         "98%";
-         "99%"];
-
-FC = ["80 bpm";
-      "40 bpm";
-      "80 bpm";
-      "140 bpm";
-      "~80 bpm"];
-
-Condicion = ["Hipoxemia moderada";
-              "Bradicardia marcada";
-              "Estado normal (ref.)";
-              "Taquicardia";
-              "Low Perfusion"];
-
-Descripcion = [
-"SpO2 bajo umbral fisiológico (<90%), FC normal. Simula hipoxemia moderada.";
-"SpO2 normal-bajo y FC muy reducida. Simula bradicardia.";
-"Condición fisiológica de referencia.";
-"SpO2 normal con FC elevada. Simula taquicardia.";
-"SpO2 alta con señal pulsátil reducida. Simula mala perfusión."
-];
-
-%% Crear tabla
-T = table(Modo,SpO2,FC,Condicion,Descripcion);
-
-%% Mostrar tipo GitHub
-disp(T)
-
-%% Exportar estilo GitHub (Markdown)
-fprintf('\n| Modo | SpO2 | FC | Condición | Descripción clínica |\n');
-fprintf('|------|------|----|------------|----------------------|\n');
-
-for i = 1:height(T)
-    fprintf('| %d | %s | %s | %s | %s |\n', ...
-        T.Modo(i), ...
-        T.SpO2(i), ...
-        T.FC(i), ...
-        T.Condicion(i), ...
-        T.Descripcion(i));
-end
-
+| Modo | SpO₂ (%) | FC (bpm) | Condición | Descripción clínica |
+| :---: | :---: | :---: | :---: | :--- |
+| **1** | 85% | 80 bpm | Hipoxemia moderada | SpO₂ bajo umbral fisiológico (< 90%), frecuencia cardíaca normal. Simula situación de hipoxemia moderada con posible riesgo de hipoxia tisular. |
+| **2** | 95% | 40 bpm | Bradicardia marcada | SpO₂ normal-bajo, frecuencia cardíaca muy reducida (< 60 bpm = bradicardia). Simula situaciones como bloqueo cardíaco, hipotiroidismo severo o efectos de fármacos. |
+| **3** | 98% | 80 bpm | Estado normal (ref.) | Condición fisiológica de referencia. SpO₂ y FC dentro de rangos normales. Útil para verificar la línea base del monitor. |
+| **4** | 98% | 140 bpm | Taquicardia | SpO₂ normal, frecuencia cardíaca elevada (> 100 bpm = taquicardia). Simula estados como estrés, fiebre, hipovolemia o taquicardia supraventricular. |
+| **5** | 99% | ~80 bpm | Low Perfusion | SpO₂ alta pero con amplitud de señal pulsátil reducida. Simula mala perfusión periférica (vasoconstricción, hipotensión, shock). Permite verificar el comportamiento del monitor ante señal débil. |
 
