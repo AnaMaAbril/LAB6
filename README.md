@@ -9,6 +9,7 @@ Para verificar el correcto funcionamiento de estos equipos sin necesidad de expo
 La presente práctica evaluó el desempeño del monitor Mindray uMEC 100 ante cuatro escenarios de simulación, verificando tanto la precisión de sus medidas frente a los valores de referencia del OxSim como la correcta y oportuna activación de sus alarmas configuradas. Este tipo de evaluación es parte fundamental del mantenimiento preventivo y la metrología de equipos biomédicos, y tiene soporte normativo en estándares internacionales como la ISO 80601-2-61 para pulsioxímetros y la IEC 60601-2-27 para monitores cardíacos.
 
 ## 2. OBJETIVOS
+---
 ### 2.1 Objetivo General
 Operar el simulador Pronk OxSim OX-1 y el monitor de signos vitales Mindray uMEC 100 para realizar pruebas funcionales de verificación de alarmas y precisión de medición de parámetros hemodinámicos.
 ### 2.2 Objetivos Específicos
@@ -19,7 +20,7 @@ Operar el simulador Pronk OxSim OX-1 y el monitor de signos vitales Mindray uMEC
 •	Documentar la práctica de forma estructurada en un repositorio de GitHub.
 
 ## 3. EQUIPOS UTILIZADOS
-
+---
 ### Monitor uMEC 100
 
 <img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (4)" src="https://github.com/user-attachments/assets/fd3791bf-4056-443e-b559-41ff4054b533" />
@@ -36,7 +37,8 @@ _Figura 2. Simulador de parámetros hemodinámicos Pronk OxSim OX-1_
 
 El Pronk OxSim OX-1 es un simulador compacto de parámetros de pulsioximetría que emite señales ópticas calibradas para reproducir diferentes combinaciones de SpO₂ y FC. Dispone de cinco modos de simulación seleccionables mediante un pulsador frontal y es compatible con sensores de las marcas Masimo, Nellcor y otros.
 
-4. ## Parte A
+## Parte A
+---
 ### 4.1 Modo "Monitor" en el uMEC 100
 Para colocar el uMEC 100 en modo Monitor se sigue el siguiente procedimiento, según el manual de operación del equipo:
 1.	Encender el equipo presionando el botón de encendido ubicado en el panel frontal.
@@ -48,8 +50,6 @@ En el modo Monitor, el uMEC 100 actualiza las lecturas de SpO₂ y FC cada ciclo
 ### 4.2 Parámetros Simulables con el Pronk OxSim OX-1
 El simulador OxSim OX-1 dispone de cinco modos de operación que permiten reproducir diferentes condiciones hemodinámicas. Cada modo genera una combinación específica de SpO₂ y FC, como se resume en la tabla siguiente:
 
-### Tabla 1. Modos de operación del simulador Pronk OxSim OX-1
-
 | Modo | SpO₂ (%) | FC (bpm) | Condición | Descripción clínica |
 | :---: | :---: | :---: | :---: | :--- |
 | **1** | 85% | 80 bpm | Hipoxemia moderada | SpO₂ bajo umbral fisiológico (< 90%), frecuencia cardíaca normal. Simula situación de hipoxemia moderada con posible riesgo de hipoxia tisular. |
@@ -58,3 +58,4 @@ El simulador OxSim OX-1 dispone de cinco modos de operación que permiten reprod
 | **4** | 98% | 140 bpm | Taquicardia | SpO₂ normal, frecuencia cardíaca elevada (> 100 bpm = taquicardia). Simula estados como estrés, fiebre, hipovolemia o taquicardia supraventricular. |
 | **5** | 99% | ~80 bpm | Low Perfusion | SpO₂ alta pero con amplitud de señal pulsátil reducida. Simula mala perfusión periférica (vasoconstricción, hipotensión, shock). Permite verificar el comportamiento del monitor ante señal débil. |
 
+_Tabla 1. Modos de operación del simulador Pronk OxSim OX-1_
