@@ -37,7 +37,7 @@ El monitor uMEC 100 de Mindray es un equipo multiparamétrico de cuidados interm
 
 El Pronk OxSim OX-1 es un simulador compacto de parámetros de pulsioximetría que emite señales ópticas calibradas para reproducir diferentes combinaciones de SpO₂ y FC. Dispone de cinco modos de simulación seleccionables mediante un pulsador frontal y es compatible con sensores de las marcas Masimo, Nellcor y otros.
 
-## Parte A
+## 4. PARTE A
 ---
 ### 4.1 Modo "Monitor" en el uMEC 100
 Para colocar el uMEC 100 en modo Monitor se sigue el siguiente procedimiento, según el manual de operación del equipo:
@@ -82,7 +82,7 @@ Los errores máximos permitidos para equipos de pulsioximetría y monitoreo card
 
 Estos límites son de particular importancia en el contexto de metrología biomédica, ya que definen el criterio de aceptación o rechazo de un equipo durante las verificaciones periódicas. En Colombia, la normativa del INVIMA exige que los equipos de monitoreo de signos vitales cumplan con estas especificaciones para su comercialización y uso clínico.
 
-## 5. Parte B — Procedimiento Experimental y Resultado
+## 5. PARTE B — Procedimiento Experimental y Resultado
 
 ### 5.1 Tabla de Verificación de Alarmas
 
@@ -134,5 +134,109 @@ Se configuraron los límites de alarma de SpO₂ y FC/FP en el uMEC 100:
 ***Figura 5. Pantalla de configuración de alarmas de SpO₂: Límite Alto = 100%, Límite Bajo = 90%***
 
 ### 5.4 Simulación de Hipoxemia (80 bpm, SpO₂ = 85%)
+
 Se ajustó el OxSim al Modo 1 (SpO₂ = 85%, FC = 80 bpm). Con el límite inferior de SpO₂ configurado en 90%, el monitor activó la alarma !!SpO₂ bajo < 90 a los aproximadamente 8 segundos de iniciada la simulación.
+
+<img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (7)" src="https://github.com/user-attachments/assets/0ade43e3-a32c-4c55-9e46-3c1e11fb86c0" />
+
+***Figura 4. uMEC 100 con hipoxemia simulada***
+
+***Tabla 5. Errores de medición — Modo 1: Hipoxemia (80 bpm, SpO₂ = 85%)***
+
+| Parámetro | V. Simulado | V. Medido | Error Abs. | Error % | EMP | ¿Dentro EMP? |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| FC (Frecuencia cardíaca) | 80 bpm | 80 ppm | 0 bpm | 0.0% | ±3 bpm | **✓ Dentro** |
+| SpO₂ (Saturación O₂) | 85% | 85% | 0% | 0.0% | ±2% | **✓ Dentro** |
+
+En este modo, el monitor registró exactamente los valores simulados (FC = 80 ppm, SpO₂ = 85%), resultando en errores absolutos de 0 bpm y 0%, respectivamente. Este escenario representa la condición de mayor riesgo clínico entre los evaluados, dado que una SpO₂ de 85% indica hipoxemia severa.
+
+### 5.5 Simulación en Modo Low Perfusion (SpO₂ = 99%)
+
+Se configuró el límite superior de SpO₂ en 97% y se ajustó el OxSim al Modo 5 (Low Perfusion, SpO₂ = 99%). El monitor registró SpO₂ = 100% y activó la alarma !!SpO₂ alto > 97 en menos de 5 segundos.
+
+<img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (14)" src="https://github.com/user-attachments/assets/cdf3bfb0-4178-4b50-9093-5ff9f2356f45" />
+
+***Figura 5. uMEC 100 con low perfusion simulada***
+
+La onda fotopletismográfica sí se distorsiona en el modo Low Perfusion: presenta amplitud reducida y variabilidad en la morfología, replicando la señal débil de un paciente con mala perfusión periférica. A pesar de la baja amplitud de la señal AC, el monitor logró calcular SpO₂ y FC correctamente.
+
+***Tabla 6. Errores de medición — Modo 5: Low Perfusion (SpO₂ = 99%, FC ≈ 80 bpm)***
+
+| Parámetro | V. Simulado | V. Medido | Error Abs. | Error % | EMP | ¿Dentro EMP? |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| FC (Frecuencia cardíaca) | 80 bpm | 80 ppm | 0 bpm | 0.0% | ±3 bpm | **✓ Dentro** |
+| SpO₂ (Saturación O₂) | 99% | 100% | 1% | 1.01% | ±2% | **✓ Dentro** |
+
+El error en SpO₂ fue de 1% (valor simulado 99%, medido 100%), con error porcentual de 1.01%, dentro del EMP de ±2%. La FC no presentó error.
+
+### 5.6 Simulación de Taquicardia (140 bpm, SpO₂ = 98%)
+
+Se ajustó el OxSim al Modo 4 (SpO₂ = 98%, FC = 140 bpm). El monitor uMEC 100 registró FC = 140 ppm y SpO₂ = 98–99%, activando dos alarmas simultáneas: !!FP alta > 120 y !!SpO₂ alto > 97.
+
+<img width="1280" height="720" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (18)" src="https://github.com/user-attachments/assets/a1b1351d-f215-4965-adbf-0c1e0cc985c0" />
+
+***Figura 6. uMEC 100 con low taquicardia simulada***
+
+La onda fotopletismográfica en taquicardia muestra picos frecuentes (~0.43 s entre pulsos), de menor amplitud relativa y patrón prácticamente sinusoidal de alta frecuencia, consistente con el valor simulado. La alarma de FC elevada se disparó correctamente dado que 140 bpm > 120 bpm (límite configurado).
+
+***Tabla 7. Errores de medición — Modo 4: Taquicardia (140 bpm, SpO₂ = 98%)***
+
+| Parámetro | V. Simulado | V. Medido | Error Abs. | Error % | EMP | ¿Dentro EMP? |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| FC (Frecuencia cardíaca) | 140 bpm | 140 ppm | 0 bpm | 0.0% | ±3 bpm | **✓ Dentro** |
+| SpO₂ (Saturación O₂) | 98% | 98-99% | 0-1% | 0-1.02% | ±2% | **✓ Dentro** |
+
+La FC fue medida con error de 0 bpm. La SpO₂ osciló entre 98% y 99% (error de 0–1%, dentro del EMP). Las dos alarmas activadas simultáneamente (FP alta y SpO₂ alto) confirman el correcto funcionamiento del sistema de alertas del monitor bajo condiciones de taquicardia con alta saturación.
+
+## 6. ANÁLISIS DE RESULTADOS
+   
+### 6.1 Análisis Estadístico de Errores de Medición
+
+A continuación se presenta el análisis estadístico de los errores obtenidos en SpO₂ a lo largo de los cuatro escenarios de simulación:
+
+•	Valores de error absoluto en SpO₂: 1%, 0%, 1%, 0–1% → Media = 0.5%, Desviación estándar ≈ 0.5 puntos porcentuales.
+
+•	Valores de error absoluto en FC: 0 bpm en todos los escenarios → Media = 0 bpm, Desviación estándar = 0 bpm.
+
+•	Error porcentual máximo observado: 1.05% (SpO₂ en bradicardia: valor simulado 95%, medido 96%).
+
+Todos los errores se encuentran por debajo del EMP de ±2% para SpO₂ (ISO 80601-2-61) y ±3 bpm para FC (IEC 60601-2-27). La exactitud del uMEC 100 para FC fue perfecta (0 bpm de error) en todos los escenarios, lo que indica que el algoritmo de detección de pulso del monitor es altamente preciso ante señales de simulación controladas.
+
+El ligero error en SpO₂ (1% en bradicardia y Low Perfusion) puede atribuirse a la curva de calibración empírica del monitor, que aproxima la relación R-SpO₂ con una función polinómica basada en estudios con voluntarios humanos. Pequeñas diferencias en la relación óptica generada por el simulador respecto a la que produciría un dedo real pueden resultar en desviaciones de ±1% en la lectura, lo cual es esperado y aceptable.
+
+6.2 Relación entre la Onda Fotopletismográfica y los Parámetros FC/SpO₂
+
+La señal Plet registrada en el uMEC 100 mostró una correlación directa con los parámetros hemodinámicos simulados:
+
+•	Bradicardia (40 bpm): Picos amplios, bien definidos y con mayor separación temporal (~1.5 s entre picos). Morfología regular y simétrica. La FC se deriva directamente del período entre picos.
+
+•	Hipoxemia (85% SpO₂, 80 bpm): Picos de frecuencia normal y morfología regular. La SpO₂ disminuida no afecta la morfología de la onda Plet, ya que esta refleja variaciones de volumen y no la oxigenación per se.
+
+•	Low Perfusion (99% SpO₂): Amplitud AC reducida y variabilidad morfológica. El monitor señaló baja confiabilidad mediante el índice de perfusión reducido. A pesar de la señal débil, la lectura de SpO₂ y FC fue correcta.
+
+•	Taquicardia (140 bpm): Picos frecuentes (~0.43 s entre pulsos), amplitud menor, patrón sinusoidal de alta frecuencia. El tiempo diastólico reducido se refleja en la forma de la onda.
+
+La frecuencia de la onda Plet corresponde exactamente a la FC/FP medida, validando que el monitor extrae la frecuencia de pulso directamente del período de la señal fotopletismográfica cuando el módulo ECG no está disponible.
+
+ 
+## 7. PREGUNTAS PARA LA DISCUSIÓN
+
+### Pregunta 1: ¿Cuál es el principio de operación del Pronk OxSim OX-1 para simular una onda pulsátil?
+
+El OxSim OX-1 opera generando dos señales luminosas moduladas: una en el espectro infrarrojo (~940 nm) y otra en el espectro rojo (~660 nm), a través de diodos emisores de luz (LEDs). La intensidad de cada señal se modula de forma temporal para imitar la variación pulsátil del volumen sanguíneo que ocurre en el lecho capilar con cada latido cardíaco.
+
+El sensor de SpO₂ del monitor, al colocarse sobre el simulador, mide la atenuación de ambas longitudes de onda y calcula el índice R según la ecuación:
+
+R = (AC₆₆₀ / DC₆₆₀) / (AC₉₄₀ / DC₉₄₀)
+
+Donde AC representa el componente pulsátil (alternante) de la señal y DC el componente continuo (luz constante). El simulador programa electrónicamente la relación entre AC y DC para generar el valor de R correspondiente a cada nivel de SpO₂, basándose en las curvas de calibración empíricas conocidas. La frecuencia de modulación temporal de la señal AC determina la FC simulada. En el modo Low Perfusion, la amplitud AC se reduce significativamente para replicar la débil señal pulsátil de un paciente con mala perfusión periférica.
+
+### Pregunta 2: ¿Por qué la SpO₂ baja puede ser un falso positivo (falsa alarma) en una situación de mala perfusión?
+
+En situaciones de mala perfusión periférica — como hipotensión, vasoconstricción por frío, shock hipovolémico o uso de vasoconstrictores — el flujo sanguíneo en el lecho capilar distal (dedo, lóbulo de la oreja) se reduce significativamente. Esto provoca que la señal pulsátil AC detectada por el pulsioxímetro sea muy pequeña en relación al componente de fondo DC, resultando en una relación señal/ruido (SNR) muy baja.
+
+Con una SNR baja, el denominador del índice R (DC₆₆₀ y DC₉₄₀) permanece relativamente estable mientras que los numeradores AC₆₆₀ y AC₉₄₀ son afectados por ruido (luz ambiental, artefactos de movimiento, electrónica del sensor). Esto desvía el cálculo de R hacia valores más altos o erráticos que, según la curva de calibración empírica, se traducen en lecturas de SpO₂ artificialmente más bajas. De este modo, el monitor puede reportar una SpO₂ disminuida (por ejemplo, 85–90%) cuando la saturación arterial real del paciente es normal (95–99%).
+
+Esta es la razón por la cual en la práctica clínica se recomienda siempre correlacionar la lectura de SpO₂ con el índice de perfusión que muestra el monitor (amplitud de la barra Plet): una SpO₂ baja acompañada de un índice de perfusión bajo debe interpretarse con cautela y confirmarse con otros métodos (gasometría arterial, ECG) antes de intervenir. El modo "Low Perfusion" del OxSim OX-1 replica exactamente este escenario, siendo especialmente útil para verificar que el monitor advierta al operador sobre la posible falta de confiabilidad de la medición.
+
 
