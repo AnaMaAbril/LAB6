@@ -19,7 +19,7 @@ Operar el simulador Pronk OxSim OX-1 y el monitor de signos vitales Mindray uMEC
 •	Documentar la práctica de forma estructurada en un repositorio de GitHub.
 
 ## 3. EQUIPOS UTILIZADOS
-<img width="780" height="560" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (4)" src="https://github.com/user-attachments/assets/fd3791bf-4056-443e-b559-41ff4054b533" />
+<img width="580" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (4)" src="https://github.com/user-attachments/assets/fd3791bf-4056-443e-b559-41ff4054b533" />
 
  
 Figura 1. Monitor de signos vitales Mindray uMEC 100 encendido en modo Monitor
