@@ -25,7 +25,7 @@ Operar el simulador Pronk OxSim OX-1 y el monitor de signos vitales Mindray uMEC
 
 <img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (4)" src="https://github.com/user-attachments/assets/fd3791bf-4056-443e-b559-41ff4054b533" />
 
-_Figura 1. Monitor de signos vitales Mindray uMEC 100 encendido en modo Monitor_
+***Figura 1. Monitor de signos vitales Mindray uMEC 100 encendido en modo Monitor***
 
 El monitor uMEC 100 de Mindray es un equipo multiparamétrico de cuidados intermedios. Incorpora módulos para ECG, SpO₂, capnografía y presión no invasiva, y cuenta con un sistema de alarmas configurable por parámetro con niveles de prioridad alta, media y baja. La pantalla muestra en tiempo real la onda fotopletismográfica (Plet), el valor numérico de SpO₂ y la frecuencia de pulso (FP).
 
@@ -33,7 +33,7 @@ El monitor uMEC 100 de Mindray es un equipo multiparamétrico de cuidados interm
 
 <img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (10)" src="https://github.com/user-attachments/assets/86026502-dbf3-4995-8990-dd4c12d9eec0" />
 
-_Figura 2. Simulador de parámetros hemodinámicos Pronk OxSim OX-1_
+***Figura 2. Simulador de parámetros hemodinámicos Pronk OxSim OX-1***
 
 El Pronk OxSim OX-1 es un simulador compacto de parámetros de pulsioximetría que emite señales ópticas calibradas para reproducir diferentes combinaciones de SpO₂ y FC. Dispone de cinco modos de simulación seleccionables mediante un pulsador frontal y es compatible con sensores de las marcas Masimo, Nellcor y otros.
 
@@ -51,7 +51,7 @@ En el modo Monitor, el uMEC 100 actualiza las lecturas de SpO₂ y FC cada ciclo
 
 El simulador OxSim OX-1 dispone de cinco modos de operación que permiten reproducir diferentes condiciones hemodinámicas. Cada modo genera una combinación específica de SpO₂ y FC, como se resume en la tabla siguiente:
 
-_Tabla 1. Modos de operación del simulador Pronk OxSim OX-1_
+***Tabla 1. Modos de operación del simulador Pronk OxSim OX-1***
 
 | Modo | SpO₂ (%) | FC (bpm) | Condición | Descripción clínica |
 | :---: | :---: | :---: | :---: | :--- |
@@ -73,9 +73,26 @@ Los parámetros que simula son:
 
 Los errores máximos permitidos para equipos de pulsioximetría y monitoreo cardíaco están establecidos por estándares internacionales de la siguiente manera:
 
-_Tabla 2. Errores Máximos Permitidos (EMP) según normas internacionales_
+***Tabla 2. Errores Máximos Permitidos (EMP) según normas internacionales***
 
 | Parámetro | EMP | Norma | Observación |
 | :--- | :---: | :---: | :--- |
 | SpO₂ | ± 2 % (rango 70–100%) | ISO 80601-2-61:2017 | Error de exactitud raíz cuadrada media (Arms ≤ 3%) ante condiciones estáticas con hemoglobina normal. |
 | FC / FP | ± 3 bpm o ± 3% (el mayor) | IEC 60601-2-27:2011 | Aplica en rango de 15–300 bpm para monitores cardíacos de diagnóstico. |
+
+Estos límites son de particular importancia en el contexto de metrología biomédica, ya que definen el criterio de aceptación o rechazo de un equipo durante las verificaciones periódicas. En Colombia, la normativa del INVIMA exige que los equipos de monitoreo de signos vitales cumplan con estas especificaciones para su comercialización y uso clínico.
+
+## 5. Parte B — Procedimiento Experimental y Resultado
+
+### 5.1 Tabla de Verificación de Alarmas
+
+Se construyó la siguiente tabla de verificación, registrando para cada escenario el límite de alarma configurado en el uMEC 100, el valor simulado por el OxSim OX-1, el valor efectivamente medido por el monitor, la activación de la alarma y el tiempo de respuesta aproximado:
+
+***Tabla 3. Verificación de alarmas del monitor uMEC 100***
+
+| # | Condición Simulada | Parámetro | Límite Configurado | Valor Simulado | Valor Medido uMEC100 | ¿Alarma Activa? | T. Respuesta |
+| :---: | :--- | :---: | :---: | :---: | :---: | :--- | :---: |
+| **1** | Bradicardia<br>40 bpm,<br>SpO₂=95% | FC (ppm) | Bajo: 50 bpm | 40 bpm | 40 ppm | **SÍ — !!FP baja <50** | < 5 s |
+| **2** | Hipoxemia<br>80 bpm,<br>SpO₂=85% | SpO₂ (%) | Bajo: 90% | 85% | 85% | **SÍ — !!SpO₂ bajo <90** | ~8 s |
+| **3** | Low Perfusion<br>SpO₂=99%,<br>~80 bpm | SpO₂ (%) | Alto: 97% | 99% | 100% | **SÍ — !!SpO₂ alto >97** | < 5 s |
+| **4** | Taquicardia<br>140 bpm,<br>SpO₂=98% | FC (ppm) | Alto: 120 bpm | 140 bpm | 140 ppm | **SÍ — !!FP alta >120** | < 5 s |
