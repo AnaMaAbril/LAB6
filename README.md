@@ -96,3 +96,38 @@ Se construyó la siguiente tabla de verificación, registrando para cada escenar
 | **2** | Hipoxemia<br>80 bpm,<br>SpO₂=85% | SpO₂ (%) | Bajo: 90% | 85% | 85% | **SÍ — !!SpO₂ bajo <90** | ~8 s |
 | **3** | Low Perfusion<br>SpO₂=99%,<br>~80 bpm | SpO₂ (%) | Alto: 97% | 99% | 100% | **SÍ — !!SpO₂ alto >97** | < 5 s |
 | **4** | Taquicardia<br>140 bpm,<br>SpO₂=98% | FC (ppm) | Alto: 120 bpm | 140 bpm | 140 ppm | **SÍ — !!FP alta >120** | < 5 s |
+
+### 5.2 Simulación de Bradicardia (40 bpm, SpO₂ = 95%)
+
+Se configuró el OxSim en el Modo 2 (SpO₂ = 95%, FC = 40 bpm). El monitor uMEC 100 registró los valores mostrados a continuación. La alarma de FP baja se activó al ser 40 ppm inferior al umbral configurado de 50 bpm.
+
+<img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (3)" src="https://github.com/user-attachments/assets/fc7a36b2-e0ed-4894-b6bd-9f13191692db" />
+***Figura 3. uMEC 100 con bradicardia simulada***
+
+La onda fotopletismográfica en bradicardia muestra picos bien definidos, con mayor separación temporal entre sí (~1.5 s entre pulsos), lo que corresponde a una frecuencia de ~40 bpm. La morfología de la onda es preservada y simétrica, indicando buena perfusión a pesar de la baja frecuencia.
+
+***Tabla 4. Errores de medición — Modo 2: Bradicardia (40 bpm, SpO₂ = 95%)***
+
+| Parámetro | V. Simulado | V. Medido | Error Abs. | Error % | EMP | ¿Dentro EMP? |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| FC (Frecuencia cardíaca) | 40 bpm | 40 ppm | 0 bpm | 0.0% | ±3 bpm | **✓ Dentro** |
+| SpO₂ (Saturación O₂) | 95% | 96% | 1% | 1.05% | ±2% | **✓ Dentro** |
+
+Fórmulas aplicadas: Error absoluto = |Valor simulado − Valor medido|  /  Error porcentual = (Error absoluto / Valor simulado) × 100%.
+Para la FC, el monitor midió exactamente 40 ppm (error = 0 bpm, 0.0%). Para la SpO₂, el monitor registró 96% frente al 95% simulado, resultando en un error absoluto de 1% y un error porcentual de 1.05%. Ambos valores se encuentran dentro de los EMP internacionales.
+
+### 5.3 Configuración de Alarmas
+
+Se configuraron los límites de alarma de SpO₂ y FC/FP en el uMEC 100:
+
+•	Límite inferior de SpO₂: 90% (prioridad Media)
+•	Límite superior de SpO₂: 97%
+•	Límite inferior FC/FP: 50 bpm
+•	Límite superior FC/FP: 120 bpm
+
+<img width="480" height="360" alt="image" src="https://github.com/user-attachments/assets/1dcfb86f-62aa-47cb-b87d-642f698eb489" />
+***Figura 5. Pantalla de configuración de alarmas de SpO₂: Límite Alto = 100%, Límite Bajo = 90%***
+
+### 5.4 Simulación de Hipoxemia (80 bpm, SpO₂ = 85%)
+Se ajustó el OxSim al Modo 1 (SpO₂ = 85%, FC = 80 bpm). Con el límite inferior de SpO₂ configurado en 90%, el monitor activó la alarma !!SpO₂ bajo < 90 a los aproximadamente 8 segundos de iniciada la simulación.
+
