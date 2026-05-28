@@ -122,8 +122,11 @@ Para la FC, el monitor midió exactamente 40 ppm (error = 0 bpm, 0.0%). Para la 
 Se configuraron los límites de alarma de SpO₂ y FC/FP en el uMEC 100:
 
 •	Límite inferior de SpO₂: 90% (prioridad Media)
+
 •	Límite superior de SpO₂: 97%
+
 •	Límite inferior FC/FP: 50 bpm
+
 •	Límite superior FC/FP: 120 bpm
 
 <img width="480" height="360" alt="image" src="https://github.com/user-attachments/assets/1dcfb86f-62aa-47cb-b87d-642f698eb489" />
