@@ -251,3 +251,4 @@ Esta es la razón por la cual en la práctica clínica se recomienda siempre cor
 
 - El modo Low Perfusion demostró que una señal pulsátil de baja amplitud no impide el cálculo correcto de SpO₂ y FC, pero sí introduce una pequeña deriva en la lectura (+1%), lo que confirma la importancia clínica de correlacionar siempre el valor numérico de SpO₂ con el índice de perfusión antes de tomar decisiones terapéuticas.
 
+- El simulador Pronk OxSim OX-1 demostró ser una herramienta confiable y reproducible para la verificación funcional de monitores de signos vitales, permitiendo replicar condiciones patológicas controladas sin exponer pacientes reales, lo que valida su uso como instrumento estándar en programas de mantenimiento preventivo y metrología biomédica hospitalaria.
