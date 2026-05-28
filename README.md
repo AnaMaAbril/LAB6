@@ -131,7 +131,7 @@ Se configuraron los límites de alarma de SpO₂ y FC/FP en el uMEC 100:
 
 <img width="480" height="360" alt="image" src="https://github.com/user-attachments/assets/1dcfb86f-62aa-47cb-b87d-642f698eb489" />
 
-***Figura 5. Pantalla de configuración de alarmas de SpO₂: Límite Alto = 100%, Límite Bajo = 90%***
+***Figura 4. Pantalla de configuración de alarmas de SpO₂: Límite Alto = 100%, Límite Bajo = 90%***
 
 ### 5.4 Simulación de Hipoxemia (80 bpm, SpO₂ = 85%)
 
@@ -139,7 +139,7 @@ Se ajustó el OxSim al Modo 1 (SpO₂ = 85%, FC = 80 bpm). Con el límite inferi
 
 <img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (7)" src="https://github.com/user-attachments/assets/0ade43e3-a32c-4c55-9e46-3c1e11fb86c0" />
 
-***Figura 4. uMEC 100 con hipoxemia simulada***
+***Figura 5. uMEC 100 con hipoxemia simulada***
 
 ***Tabla 5. Errores de medición — Modo 1: Hipoxemia (80 bpm, SpO₂ = 85%)***
 
@@ -156,7 +156,7 @@ Se configuró el límite superior de SpO₂ en 97% y se ajustó el OxSim al Modo
 
 <img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (14)" src="https://github.com/user-attachments/assets/cdf3bfb0-4178-4b50-9093-5ff9f2356f45" />
 
-***Figura 5. uMEC 100 con low perfusion simulada***
+***Figura 6. uMEC 100 con low perfusion simulada***
 
 La onda fotopletismográfica sí se distorsiona en el modo Low Perfusion: presenta amplitud reducida y variabilidad en la morfología, replicando la señal débil de un paciente con mala perfusión periférica. A pesar de la baja amplitud de la señal AC, el monitor logró calcular SpO₂ y FC correctamente.
 
@@ -175,7 +175,7 @@ Se ajustó el OxSim al Modo 4 (SpO₂ = 98%, FC = 140 bpm). El monitor uMEC 100 
 
 <img width="1280" height="720" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (18)" src="https://github.com/user-attachments/assets/a1b1351d-f215-4965-adbf-0c1e0cc985c0" />
 
-***Figura 6. uMEC 100 con low taquicardia simulada***
+***Figura 7. uMEC 100 con low taquicardia simulada***
 
 La onda fotopletismográfica en taquicardia muestra picos frecuentes (~0.43 s entre pulsos), de menor amplitud relativa y patrón prácticamente sinusoidal de alta frecuencia, consistente con el valor simulado. La alarma de FC elevada se disparó correctamente dado que 140 bpm > 120 bpm (límite configurado).
 
