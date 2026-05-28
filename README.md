@@ -102,6 +102,7 @@ Se construyó la siguiente tabla de verificación, registrando para cada escenar
 Se configuró el OxSim en el Modo 2 (SpO₂ = 95%, FC = 40 bpm). El monitor uMEC 100 registró los valores mostrados a continuación. La alarma de FP baja se activó al ser 40 ppm inferior al umbral configurado de 50 bpm.
 
 <img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (3)" src="https://github.com/user-attachments/assets/fc7a36b2-e0ed-4894-b6bd-9f13191692db" />
+
 ***Figura 3. uMEC 100 con bradicardia simulada***
 
 La onda fotopletismográfica en bradicardia muestra picos bien definidos, con mayor separación temporal entre sí (~1.5 s entre pulsos), lo que corresponde a una frecuencia de ~40 bpm. La morfología de la onda es preservada y simétrica, indicando buena perfusión a pesar de la baja frecuencia.
@@ -126,6 +127,7 @@ Se configuraron los límites de alarma de SpO₂ y FC/FP en el uMEC 100:
 •	Límite superior FC/FP: 120 bpm
 
 <img width="480" height="360" alt="image" src="https://github.com/user-attachments/assets/1dcfb86f-62aa-47cb-b87d-642f698eb489" />
+
 ***Figura 5. Pantalla de configuración de alarmas de SpO₂: Límite Alto = 100%, Límite Bajo = 90%***
 
 ### 5.4 Simulación de Hipoxemia (80 bpm, SpO₂ = 85%)
