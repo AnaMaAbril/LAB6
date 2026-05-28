@@ -173,7 +173,7 @@ El error en SpO₂ fue de 1% (valor simulado 99%, medido 100%), con error porcen
 
 Se ajustó el OxSim al Modo 4 (SpO₂ = 98%, FC = 140 bpm). El monitor uMEC 100 registró FC = 140 ppm y SpO₂ = 98–99%, activando dos alarmas simultáneas: !!FP alta > 120 y !!SpO₂ alto > 97.
 
-<img width="1280" height="720" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (18)" src="https://github.com/user-attachments/assets/a1b1351d-f215-4965-adbf-0c1e0cc985c0" />
+<img width="480" height="360" alt="WhatsApp Image 2026-05-27 at 12 52 01 PM (18)" src="https://github.com/user-attachments/assets/a1b1351d-f215-4965-adbf-0c1e0cc985c0" />
 
 ***Figura 7. uMEC 100 con low taquicardia simulada***
 
