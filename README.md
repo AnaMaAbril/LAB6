@@ -1,3 +1,8 @@
+# LABORATORIO 6: SIMULACIÓN Y MONITOREO DE VARIABLES CARDIOVASCULARES Y EMODIMÁMICAS
+
+### ***Instrumentación Biomédica y Biosensores***
+### ***Ana María Abril***
+### ***Leidy Valentina Rodríguez***
 
 ## 1. INTRODUCCIÓN
 ---
